@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='stylesheet' href='assets/lib/bootstrap/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='assets/css/estilos.css'>
+  <title>Sistema de Inscripcion</title>
+</head>
+
+<body>
+  <div class="container row mx-auto mt-3" style="max-width: 50rem;">
+    <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active text-white " id="datos-Personales" aria-current="page"><a href="#">Datos
+            Personales</a></li>
+        <li class="breadcrumb-item active text-white " id="seleccion-Materia" aria-current="page"><a href="#">Seleccion de
+            Materias</a></li>
+        <li class="breadcrumb-item active text-white " id="horario-Datos" aria-current="page"><a
+            href="#">Horario</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card mx-auto mt-1" id="formulario" style="max-width: 50rem;">
+
+    <div class="card-header bg-primary text-center text-white h3">Sistema de inscripcion</div>
+    <div class="card-body mt-2 row">
+
+      <div class="col-md-6">
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="input-Nombre" placeholder="Nombre">
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="input-Provincia" placeholder="Provincia">
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="input-Ciudad" placeholder="Ciudad">
+        </div>
+
+      </div>
+
+      <div class="col-md-6">
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="input-Sector" placeholder="Sector">
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="input-Calle" placeholder="Calle">
+        </div>
+
+        <div class="form-group mb-3">
+          <select type="text" id="select-Carrera" class="form-select" aria-label=".form-select-lg example" />
+          <option selected>Seleccione una carrera...</option>
+          <option value="1">Software</option>
+          <option value="2">Mecatronica</option>
+          <option value="3">Redes</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+    <div class="container mb-3 row">
+      <div class="text-end col">
+        <button type="submit" class="btn btn-primary  btn-lg " id="btn-Limpiar">Limpiar
+        </button>
+      </div>
+      <div class="text-end col">
+        <button type="submit" class="btn btn-primary  btn-lg " id="btn-Siguiente">Siguiente
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mx-auto mt-1 esconder" id="formulario-Seleccion" style="max-width: 50rem;">
+
+    <div class="card-header text-center bg-primary text-white h3">Seleccion de Materias</div>
+    <div class="card-body mt-2">
+
+      <div class="accordion " id="accordionExample">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <span id="primeraMateria"></span>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="row align-items-center">
+
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="primeraClase" id="seleccion-Lunes-1">
+                  <label class="form-check-label" for="primeraClase">
+                    lunes 14:00 - 17:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="primeraClase" id="seleccion-Martes-1">
+                  <label class="form-check-label" for="primeraClase">
+                    martes 8:00 - 12:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="primeraClase" id="seleccion-Viernes-1">
+                  <label class="form-check-label" for="primeraClase">
+                    viernes 16:00 - 18:59
+                  </label>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <span id="segundaMateria"></span>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="row align-items-center">
+
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="segundaClase" id="seleccion-Miercoles-2">
+                  <label class="form-check-label" for="segundaClase">
+                    mier 18:00 - 21:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="segundaClase" id="seleccion-Jueves-2">
+                  <label class="form-check-label" for="segundaClase">
+                    jue 8:00 - 12:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="segundaClase" id="seleccion-Sabados-2">
+                  <label class="form-check-label" for="segundaClase">
+                    sab 18:00 - 21:59
+                  </label>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <span id="terceraMateria"></span>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="row align-items-center">
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="terceraClase" id="seleccion-Lunes-3">
+                  <label class="form-check-label" for="terceraClase">
+                    lunes 14:00 - 17:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="terceraClase" id="seleccion-Martes-3">
+                  <label class="form-check-label" for="terceraClase">
+                    martes 8:00 - 12:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="terceraClase" id="seleccion-Viernes-3">
+                  <label class="form-check-label" for="terceraClase">
+                    viernes 16:00 - 18:59
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <span id="cuartaMateria"></span>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="row align-items-center">
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="cuartaClase" id="seleccion-Miercoles-4">
+                  <label class="form-check-label" for="cuartaClase">
+                    mier 18:00 - 21:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="cuartaClase" id="seleccion-Jueves-4">
+                  <label class="form-check-label" for="cuartaClase">
+                    jue 8:00 - 12:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="cuartaClase" id="seleccion-Sabados-4">
+                  <label class="form-check-label" for="cuartaClase">
+                    sab 18:00 - 21:59
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <span id="quintaMateria"></span>
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+              <div class="row align-items-center">
+
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="quintaClase" id="seleccion-Lunes-5">
+                  <label class="form-check-label" for="quintaClase">
+                    lunes 14:00 - 17:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="quintaClase" id="seleccion-Martes-5">
+                  <label class="form-check-label" for="quintaClase">
+                    martes 8:00 - 12:59
+                  </label>
+                </div>
+                <div class="form-check col-md-3">
+                  <input class="form-check-input" type="radio" name="quintaClase" id="seleccion-Viernes-5">
+                  <label class="form-check-label" for="quintaClase">
+                    viernes 16:00 - 18:59
+                  </label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container mb-3 row mt-3">
+        <div class="text-end col">
+          <button type="submit" class="btn btn-primary  btn-lg " id="btn-Siguiente-Seleccion">Siguiente
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card mx-auto mt-1 esconder" id="Horario" style="max-width: 70rem;">
+
+    <div class="card-header text-center bg-primary h3 text-white">Horario</div>
+    <div class="card-body mt-2">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item h6" id="nombre-Horario"></li>
+        <li class="list-group-item h6" id="provincia-Horario"></li>
+        <li class="list-group-item h6" id="ciudad-Horario"></li>
+        <li class="list-group-item h6" id="sector-Horario"></li>
+        <li class="list-group-item h6" id="calle-Horario"></li>
+        <li class="list-group-item h6" id="carrera-Horario"></li>
+      </ul>
+      <div class=" col-md-12">
+        <table class="table table-primary  table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Materia</th>
+              <th scope="col">Lunes</th>
+              <th scope="col">Martes</th>
+              <th scope="col">Miercoles</th>
+              <th scope="col">Jueves</th>
+              <th scope="col">Viernes</th>
+              <th scope="col">Sabados</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span id="primeraMateriaTabla"></span></th>
+              <td id="lunes-1"></td>
+              <td id="martes-1"></td>
+              <td></td>
+              <td></td>
+              <td id="viernes-1"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span id="segundaMateriaTabla"></span></th>
+              <td></td>
+              <td></td>
+              <td id="miercoles-2"></td>
+              <td id="jueves-2"></td>
+              <td></td>
+              <td id="sabado-2"></td>
+            </tr>
+            <tr>
+              <th scope="row"><span id="terceraMateriaTabla"></span></th>
+              <td id="lunes-3"></td>
+              <td id="martes-3"></td>
+              <td></td>
+              <td></td>
+              <td id="viernes-3"></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row"><span id="cuartaMateriaTabla"></span></th>
+              <td></td>
+              <td></td>
+              <td id="miercoles-4"></td>
+              <td id="jueves-4"></td>
+              <td></td>
+              <td id="sabado-4"></td>
+            </tr>
+            <tr>
+              <th scope="row"><span id="quintaMateriaTabla"></span></th>
+              <td id="lunes-5"></td>
+              <td id="martes-5"></td>
+              <td></td>
+              <td></td>
+              <td id="viernes-5"></td>
+              <td></td>
+            </tr>
+            <tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <script src="assets/lib/jquery/jquery.min.js"></script>
+  <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/index-Jquery.js"></script>
+</body>
+
+</html>
